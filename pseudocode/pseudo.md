@@ -7,30 +7,37 @@
 
 - Spaceman on one side -- Rocket on the other? (or just one)
 
-- Letter Bank on the left or right(in front of or inside of image)(on click)
+- Letter Bank on the bottom (on click)
 
 - Blank _____ on the bottom of the screen to hold letters
 
 - 'Tries' tracker 
 
+
+<!-- /*----- functions -----*/ -->
+- initialize() To start the game
+
+
+<!-- On click  -->
+- On click for try again button
+- On click for for letter bank to add it to the mystery word or remove from Tries count
 - 
-
-
 
 
 <!-- Constants -->
 - Word stored or each letter stored in a var or Array
+- Letters to choose from
+- 
 
 
 <!-- App's state (variables) -->
-
-
-
-
+- Board
+- Winner
 
 
 <!-- ICE BOX(least to most difficult) --> 
 - Prompt 'Help the lonely voyager get home' (by solving this-->')
 - 'Hint' button for a hint on the word
-- Have an image of the ship slowly construct itslef with every right guess.
+- Add effect for rocket to be build so he/she escapes space
+- Have an image of the ship slowly constructing itself with every right guess.
 - Math.random() a word bank instad of one word and render it to the board.
