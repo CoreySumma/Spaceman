@@ -11,11 +11,14 @@
 
 - Blank _____ on the bottom of the screen to hold letters
 
-- 'Tries' tracker 
+- 'life' tracker on side
+
 
 
 <!-- /*----- functions -----*/ -->
 - initialize() To start the game
+- If the player does not pick the correct choice it subtracts from Life(And visiaully from the spaceman)
+- If a player does then we make the letter of that word visible
 
 
 <!-- On click  -->
@@ -26,8 +29,8 @@
 
 <!-- Constants -->
 - Word stored or each letter stored in a var or Array
-- Letters to choose from
-- 
+- Letters to choose from 
+- Visuals [maybe crop each part of spaceship or spaceman]
 
 
 <!-- App's state (variables) -->
