@@ -37,6 +37,8 @@
 - Board
 - Winner
 
+<!-- Possible Word(s) -->
+[Rocket, U.S.S. Enterprise, Galaxy, Android,]
 
 <!-- ICE BOX(least to most difficult) --> 
 - Prompt 'Help the lonely voyager get home' (by solving this-->')
