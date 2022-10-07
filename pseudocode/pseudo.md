@@ -17,8 +17,12 @@
 
 <!-- /*----- functions -----*/ -->
 - initialize() To start the game
-- If the player does not pick the correct choice it subtracts from Life(And visiaully from the spaceman)
+- If the player does not pick the correct choice it subtracts from Life(And visually from the spaceman)
 - If a player does then we make the letter of that word visible
+-
+
+<!-- Hidden to none hidden -->
+- Word is set to flex fill the center of the page
 
 
 <!-- On click  -->
@@ -34,15 +38,18 @@
 
 
 <!-- App's state (variables) -->
-- Board
+- Word
 - Winner
+- Keyboard
+-Spaceman/Spaceship
 
 <!-- Possible Word(s) -->
-[Rocket, U.S.S. Enterprise, Galaxy, Android,]
+[Rocket, U.S.S. Enterprise, Galaxy, Android]
 
 <!-- ICE BOX(least to most difficult) --> 
 - Prompt 'Help the lonely voyager get home' (by solving this-->')
 - 'Hint' button for a hint on the word
+- Show letters that were chosen that were incorrect
 - Add effect for rocket to be build so he/she escapes space
 - Have an image of the ship slowly constructing itself with every right guess.
 - Math.random() a word bank instad of one word and render it to the board.
