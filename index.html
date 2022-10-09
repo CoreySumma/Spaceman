@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project_1</title>
-    <!-- connection to css and js -->
+    <title>Space_Man</title>
+<!-- connection to css and js -->
     <script defer src="/js/script.js"></script>
-    <link href="css/style.css" rel="stylesheet" type="text/css" />    <!-- font -->
+<!-- font -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,20 +16,63 @@
     <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Space</h1>
-    <br>
-    <h2>The Final Frontier...</h2>
-    <div class ='board'>
-    <div id="word"></div>
-    <div id="life"></div>
-    <div id="lettersUsed"></div>
-    <div id="guessButton">
-    <label for="name">Your Guess:</label>
-        <input type="text" id="name" name="name" required
-            minlength="4" maxlength="8" size="10">
-        </div>
-    <div id="playAgain"></div>
+    <header>
+    
+    <div class="title">
+    <u>Space Man</u>
     </div>
-    </board>
-</body>
-</html>
+    <h2>Help him get home</h2>
+    </header>
+    
+    <main>
+        <div id="word">word</div>
+        <div id="wrongLetter">Wrong Guess Letter</div>
+    </main>
+        
+    <footer>
+        <div class="keyboard">
+        <div>
+            <!--  Q W E R T Y U I O P  -->  
+            <button id="keys" value = "q">Q</button>
+            <button id="keys" value = "w">W</button>    
+            <button id="keys" value = "e">E</button>
+            <button id="keys" value = "r">R</button>
+            <button id="keys" value = "t">T</button>
+            <button id="keys" value = "y">Y</button>
+            <button id="keys" value = "u">U</button>
+            <button id="keys" value = "i">I</button>
+            <button id="keys" value = "o">O</button>
+            <button id="keys" value = "p">P</button>
+        </div>
+            <!-- A S D F G H J K L  -->
+        <div>
+            <button id="keys" value = "a">A</button>
+            <button id="keys" value = "s">S</button>
+            <button id="keys" value = "d">D</button>
+            <button id="keys" value = "f">F</button>
+            <button id="keys" value = "g">G</button>
+            <button id="keys" value = "h">H</button>
+            <button id="keys" value = "j">J</button>
+            <button id="keys" value = "k">K</button>
+            <button id="keys" value = "l">L</button>
+        </div>
+            <!-- Z X C V B N M -->
+        <div>
+            <button id="keys" value = "z">Z</button>
+            <button id="keys" value = "x">X</button>
+            <button id="keys" value = "c">C</button>
+            <button id="keys" value = "v">V</button>
+            <button id="keys" value = "b">B</button>
+            <button id="keys" value = "n">N</button>
+            <button id="keys" value = "m">M</button>
+        </div>
+        </div>
+        <br>
+
+    <div id="playAgain">
+        <button>Play Again</button>
+    </div>
+    </footer>
+    </body>
+
+    </html>

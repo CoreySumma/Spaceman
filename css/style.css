@@ -1,19 +1,79 @@
-:root {
-    background-image: url(https://newevolutiondesigns.com/images/freebies/4k-space-wallpaper-1.jpg) ;
-    
-}
+
+
 body {
-    height: 100%;
-    width: 100%;
+    background-image: url(https://newevolutiondesigns.com/images/freebies/4k-space-wallpaper-1.jpg) ;
+    background-size: cover;
     font-family: 'Gemunu Libre', sans-serif;
-    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    display: grid;     
+    text-align: center;
+    justify-content: center;
+    align-items:center ;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px auto 300px;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+header {
+    grid-area: header;
+    /* background-color: aquamarine; */
+}
+main {
+    grid-area: main;
+    /* background-color: blue; */
+  }
+
+footer {
+    grid-area: footer;
+    /* background-color: blueviolet; */
+}
+button {
+    background-color: black;
     color: white;
+}
+button:hover {
+    background-color: white;
+    color: black;
+  }
+.title {
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 80px;
+    color: white;
+}
+h2 {
+    font-size: 30px;
+    color: white;
+}
+#word {
+    color: white;
+    grid-area: main;
     display: flex;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 10vmin 10vmin 35vmin 15vmin;
     align-items: center;
     justify-content: center;
+    margin: auto;
 }
+#wrongLetter {
+    color: white;
+    grid-area: main;
+    justify-content: center;
+
+}   
+#keys {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+} 
+#playAgain {
+    height: 50px;    
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 /* 26 keys to be clicked and listened for */
@@ -21,13 +81,6 @@ body {
 /* A S D F G H J K L */
 /* Z X C V B N M */
 
-/* .keyboard {
-    width: 500px;
-    background-color: white;
-    position: bottom;    
-    width: 800px;
-    height: 200px;
-    margin: 0 auto; */
 
 
 
@@ -35,4 +88,4 @@ body {
 
 
 
-}
+
