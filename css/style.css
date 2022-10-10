@@ -5,30 +5,13 @@ body {
     background-size: cover;
     font-family: 'Gemunu Libre', sans-serif;
     height: 100vh;
-    display: grid;     
+    display: flex;
+    flex-direction: column;     
     text-align: center;
-    justify-content: center;
+    justify-content: space-between;
     align-items:center ;
-    grid-template-columns: 1fr;
-    grid-template-rows: 200px auto 300px;
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer";
 }
-header {
-    grid-area: header;
-    /* background-color: aquamarine; */
-}
-main {
-    grid-area: main;
-    /* background-color: blue; */
-  }
 
-footer {
-    grid-area: footer;
-    /* background-color: blueviolet; */
-}
 button {
     background-color: black;
     color: white;
@@ -47,6 +30,7 @@ h2 {
     color: white;
 }
 #word {
+    font-size: 100px;
     color: white;
     grid-area: main;
     display: flex;
@@ -55,23 +39,23 @@ h2 {
     margin: auto;
 }
 #wrongLetter {
+    font-size: 80px;
     color: white;
     grid-area: main;
     justify-content: center;
 
 }   
-#keys {
+.keys {
     display: inline-block;
     height: 40px;
     width: 40px;
     margin: 10px;
 } 
 #playAgain {
-    height: 50px;    
-    width: 50px;
-    display: flex;
-    justify-content: center;
+    height: 40px;   
+    width: 100px;
     align-items: center;
+    justify-content: center;
 }
 
 

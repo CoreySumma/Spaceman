@@ -2,21 +2,20 @@
 //           A, S, D, F, G, H, J, K, L
 //             Z, X, C, V, B, N, M ]
 
-//Render each letter with box around it
+
 /*----- constants -----*/
-const wordIndex = ['Rocket', 'Galaxy', 'Android', 'Space Corey', 'Super Nova'];
+const wordBank = ['CRATE','SLANT', 'TRACE', 'ROAST', 'BEANS', 'ADIEU'];
 
-const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 
-'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
-//split word into array once chosen
+//split word into array once chosen, maybe map()
 
 
 
 /*----- app's state (variables) -----*/
+let userChoice; //letter chosen 
 let tries;//How many tries left
 let word;//which word is chosen at random
-let letter;//Input of letter that was guessed
+let letter;//letter of word 
 let result;// If you guessed the word before tries runs out
 
 
@@ -26,7 +25,7 @@ let result;// If you guessed the word before tries runs out
 /*----- cached element references -----*/
 const wordEl = document.getElementById('word');//Where the word appears
 // const airEl = document.getElementById('air'); Air tank decreasing
-const lettersUsedEl = document.getElementById('lettersUsed');//Show the wrong choice
+const wrongLetterEl = document.getElementById('wrongLetter');//Show the wrong choice
 const guessButtonEl = document.getElementById('keyboard');//clickable keyboard
 const playAgainEl = document.getElementById('playAgain');//Reset the game
 const keysEl = document.querySelectorAll('keys');
@@ -34,54 +33,78 @@ const keysEl = document.querySelectorAll('keys');
 
 /*----- event listeners -----*/
 //EventListener for the buttons -->
-//if the onclick button value === any value of the index of the word chosen 
+document.getElementById('keyboard').addEventListener('click', handleChoice)
+// if the onclick button value === any value of the index of the word chosen 
 //then append that letter to the correlated [idx] of the chosen work into wordEl (renderWord)
 //if it does not match then tries--
 
 //Play again button to re init game
-
-
+function handleChoice(evt) {
+    if (evt.target.tagName !== 'BUTTON' || 
+        userChoice.includes(evt.target.value.toUpperCase())
+    ) return;
+    userChoice.push(evt.target.value.toUpperCase())
+    if (word.include(evt.target.value.toUpperCase())) {
+        render();
+    } else {
+        tries -= 1;
+        render()
+    }
+}
 
 
 
 /*----- functions -----*/
+init();
 function init() {
-tries = 10;
-word = [''];
-
+tries = 6;
+word = pickWord();
+userChoice = [];
+word.forEach(function(){
+    let letterEl = document.createElement('div');
+    wordEl.appendChild(letterEl);
+})
 render()
+}
+
 function render() {
-    renderWord(); //choose a word and display _ for each letter
-    renderLetter();//render the letter to each _
-    renderTries();//If wrong value selected then tries--
-    renderResult()//If player selects letters of word return winner, else return 'You Lose'
+    renderWord(); //display each letter
+    // renderTries();//If wrong value selected then tries--
+    // renderResult()//If player selects letters of word return winner, else return 'You Lose'
 }
+function pickWord() {
+    let chosenWord = Math.floor(Math.random() * wordBank.length);//choose from random word index
+    let word = wordBank[chosenWord];//assign word to random word
+    return word.split('');
+}   
+
 function renderWord() {
-    let word = Math.floor(Math.random() * wordIndex.length);//choose from random word index
-    return wordIndex[word];
-    for (let i = 0; i < word.length; i++) {
-         
+    
+    
 }
 
-function renderLetter() {
-//     if (keysEl === choice of key value) {
-// insert letter on the idx of _
-    }
+// function renderChoice() {
+// //     if (keysEl === choice of key value) {
+// // insert letter on the idx of _
+// //or switch it?
+//     }
 
 
-function renderTries() {
-if (letter !== word[idx]) {
-    return tries --
-}
-return
-}
+// function renderTries() {
+// if (letter !== word[idx]) {
+//     return tries --
+// }
+// return
+// }
 
-function renderResult() {
-if (tries === 0) {
+// function renderResult() {
+// if (tries < 0 && guess === word.length) {  //define guess/winner
+//     return winner;
+// } 
 
-}
+// }
 
-}
+// }
 
 
 
@@ -98,4 +121,4 @@ if (tries === 0) {
                     // and the air count will go down by -1
 
                     // Otherwise(picks correct letter): the letter will be pushed 
-                    // onto it's index correlated div//
+                    // onto it's index correlated div
