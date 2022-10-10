@@ -31,12 +31,17 @@ h2 {
 }
 #word {
     font-size: 100px;
+    width: 60vw;
     color: white;
     grid-area: main;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: auto;
+}
+#word > div {
+    border-bottom: 3px solid lightcoral;
+    width: 40px;
 }
 #wrongLetter {
     font-size: 80px;

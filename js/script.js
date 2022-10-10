@@ -62,26 +62,39 @@ function init() {
 tries = 6;
 word = pickWord();
 userChoice = [];
-word.forEach(function(){
+word.forEach(function() {
     let letterEl = document.createElement('div');
     wordEl.appendChild(letterEl);
 })
 render()
 }
-
+console.log(word)
+console.log(wordEl)
 function render() {
-    function renderWord(); 
-    
+    renderWord();
+}
+ 
     
     //display each letter
     // renderTries();//If wrong value selected then tries--
     // renderResult()//If player selects letters of word return winner, else return 'You Lose'
-}
+
 function pickWord() {
     let chosenWord = Math.floor(Math.random() * wordBank.length);//choose from random word index
     let word = wordBank[chosenWord];//assign word to random word
     return word.split('');
 }   
+
+function renderWord() {
+    let letterEls = [...document.querySelectorAll('#word > div')];
+    word.forEach(function(letter, idx) {
+        if (userChoice.includes(letter)) {
+            letterEls[idx].innerHTML = letter;
+        }
+    })
+}
+
+
 
 
 // function renderChoice() {
