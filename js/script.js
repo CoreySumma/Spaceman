@@ -43,8 +43,10 @@ function handleChoice(evt) {
     if (evt.target.tagName !== 'BUTTON' || 
         userChoice.includes(evt.target.value.toUpperCase())
     ) return;
+    console.log(evt.target.value)
     userChoice.push(evt.target.value.toUpperCase())
-    if (word.include(evt.target.value.toUpperCase())) {
+    console.log(userChoice);
+    if (word.includes(evt.target.value.toUpperCase())) {
         render();
     } else {
         tries -= 1;
@@ -68,7 +70,10 @@ render()
 }
 
 function render() {
-    renderWord(); //display each letter
+    function renderWord(); 
+    
+    
+    //display each letter
     // renderTries();//If wrong value selected then tries--
     // renderResult()//If player selects letters of word return winner, else return 'You Lose'
 }
@@ -78,10 +83,6 @@ function pickWord() {
     return word.split('');
 }   
 
-function renderWord() {
-    
-    
-}
 
 // function renderChoice() {
 // //     if (keysEl === choice of key value) {
