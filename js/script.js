@@ -22,6 +22,7 @@ const wrongLetterEl = document.getElementById('wrongLetter');//Show the wrong ch
 const guessButtonEl = document.getElementById('keyboard');//clickable keyboard
 const playAgainEl = document.getElementById('playAgain');//Reset the game
 const keysEl = document.querySelectorAll('keys');
+const spacemanEl = document.querySelector('img');
 
 
 /*----- event listeners -----*/
@@ -69,7 +70,7 @@ function render() {
     renderResult();
 }
  
-    
+
    
     // renderTries();//If wrong value selected then tries--
     // renderResult()//If player selects letters of word return winner, else return 'You Lose'
@@ -96,10 +97,9 @@ function renderResult() {
    }}
 
 function renderIMG() {
-    const imgPath = `pseudocode/IMG/spaceman-${userChoice.length}.png`;
-    console.log(imgPath);
-    let spacemanEl = document.querySelector('#spacemanIMG');
-    spacemanEl.style.backgroundImage = `url("${imgPath}")`;
+    // const imgPath = `pseudocode/IMG/spaceman-${userChoice.length}.png`;
+    // console.log(imgPath);
+    spacemanEl.src = `pseudocode/IMG/spaceman-${userChoice.length}.png`;
 }
 
 

@@ -44,9 +44,9 @@ h2 {
     color: white;
 }
 .spaceman {
-    height: 500px;
-    border: 2px solid white ;
-    z-index: 3;
+    height: 10px;
+    display: flex;
+    align-items: baseline;
 }
 #word > div {
     border-bottom: 3px solid lightcoral;
