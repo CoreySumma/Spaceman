@@ -1,5 +1,5 @@
 # <Spaceman>
-Project 1 GA
+# <ins>SpaceMan</ins>
 
 A simple word guessing game that gives you 6 attempts (liters of oxygen) 
 to guess a random mystery word.  Guess the word before the spaceman dissapears
@@ -28,6 +28,7 @@ to guess a random mystery word.  Guess the word before the spaceman dissapears
   - Randomly generate messages on correct/Incorrect guesses
   - Word categories to choose from
   - CSS animations 
-  - Souns effects 
+  - Sound effects
+  - Hint Button per word 
   
   
