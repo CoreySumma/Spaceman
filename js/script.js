@@ -1,6 +1,6 @@
 /*----- Constants -----*/
-const wordBank = ['PLANET', 'ASTEROID', 'UFO', 'COMET', 'STAR', 'SUN', 'ANDROMEDA', 'SUPERNOVA'];
-
+// const wordBank = ['PLANET', 'ASTEROID', 'UFO', 'COMET', 'STAR', 'SUN', 'ANDROMEDA', 'SUPERNOVA'];
+const wordBank = ['POOOOP'];
 
 
 
@@ -41,15 +41,13 @@ function handleChoice(evt) {  //the function for event listener
     if (word.includes(evt.target.value.toUpperCase())) {
         correctChoice.push(evt.target.value.toUpperCase())
         word.forEach(function (letter, idx) {
-            if (evt.target.value === letter) guess[idx] = letter;
-            
-            
+            console.log(letter)
+            if (evt.target.value.toUpperCase() === letter) guess[idx] = letter;
         })
         result = checkResult();
         render();
         
     } else {
-        console.log('bye')
         wrongChoice.push(evt.target.value.toUpperCase())
         tries -= 1;
         result = checkResult();
@@ -96,7 +94,7 @@ function pickWord() {
 
 function renderWord() {
     // let letterEls = [...document.querySelectorAll('#word > div')];
-    wordEl.textContent = guess.join('')
+    wordEl.textContent = guess.join('');
 
 
         // if (correctChoice.includes(letter)) {
