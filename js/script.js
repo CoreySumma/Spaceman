@@ -27,7 +27,7 @@ const spacemanEl = document.querySelector('img');
 /*----- Event Listeners -----*/
 //EventListener for the buttons -->
 document.getElementById('keyboard').addEventListener('click', handleChoice);
-playAgainEl.addEventListener('click', refreshBoard);
+playAgainEl.addEventListener('click', init);
 
 
 
@@ -61,15 +61,14 @@ function handleChoice(evt) {  //the function for event listener
 init();
 function init() {
     guess = []
+    guessButtonEl.style.visibility = 'visible';
     playAgainEl.style.visibility = 'hidden';
     tries = 6;
     word = pickWord();
     correctChoice = [];
     wrongChoice = [];
     result = null;
-    word.forEach(function (letter) {
-        // let letterEl = document.createElement('div');
-        // wordEl.appendChild(letterEl);
+    word.forEach(function () {
         guess.push('_');
     })
     render()
@@ -104,7 +103,7 @@ function renderWord() {
     
 }
 function checkResult() {
-    if (correctChoice.length === word.length) return 'W';
+    if (guess.join('') === word.join('')) return 'W';
     if (tries === 0) return 'L';
     return null
 }
