@@ -4,6 +4,7 @@ const wordBank = ['PLANET','ASTEROID', 'UFO', 'COMET', 'DROID', 'GALAXY'];
 
 
 
+
 /*----- app's state (variables) -----*/
 let userChoice; //Letter chosen/clicked 
 let wrongChoice;
