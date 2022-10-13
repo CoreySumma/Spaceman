@@ -1,5 +1,5 @@
 /*----- Constants -----*/
- const wordBank = ['PLANET', 'ASTEROID', 'UFO', 'COMET', 'STAR', 'SUN', 'ANDROMEDA', 'SUPERNOVA'];
+const wordBank = ['PLANET', 'ASTEROID', 'UFO', 'COMET', 'STAR', 'SUN', 'ANDROMEDA', 'SUPERNOVA'];
 
 
 
@@ -9,9 +9,8 @@ let correctChoice; //Correct letter chosen/clicked
 let wrongChoice; //Incorrect letter chosen/clicked
 let tries;//How many wrong clicks available
 let word;//Represents the word chosen for the game
-let letter;//Represents an individual letter within the word chosen
 let result;// Represents the W or L result of the game 
-let guess; //_ for word
+let guess; //Where the guess appears (_) for each letter
 
 
 
@@ -37,30 +36,30 @@ function handleChoice(evt) {  //the function for event listener
         correctChoice.includes(evt.target.value.toUpperCase()) ||
         wrongChoice.includes(evt.target.value.toUpperCase())
     ) return;
-   
+
     if (word.includes(evt.target.value.toUpperCase())) {
         correctChoice.push(evt.target.value.toUpperCase())
         word.forEach(function (letter, idx) {
-            console.log(letter)
             if (evt.target.value.toUpperCase() === letter) guess[idx] = letter;
         })
         result = checkResult();
         render();
-        
+
     } else {
         wrongChoice.push(evt.target.value.toUpperCase())
         tries -= 1;
         result = checkResult();
+        
         render()
     }
 }
-
-
 
 /*----- functions -----*/
 init();
 function init() {
     guess = []
+    wrongLetterEl.style.visibility = 'visible';
+    spacemanEl.style.visibility = 'visible';
     guessButtonEl.style.visibility = 'visible';
     playAgainEl.style.visibility = 'hidden';
     tries = 6;
@@ -81,10 +80,6 @@ function render() {
 }
 
 
-
-// renderTries();//If wrong value selected then tries--
-// renderResult()//If player selects letters of word return winner, else return 'You Lose'
-
 function pickWord() {
     let chosenWord = Math.floor(Math.random() * wordBank.length);//choose from random word index
     word = wordBank[chosenWord];//assign word to random word
@@ -92,16 +87,9 @@ function pickWord() {
 }
 
 function renderWord() {
-    // let letterEls = [...document.querySelectorAll('#word > div')];
     wordEl.textContent = guess.join('');
-
-
-        // if (correctChoice.includes(letter)) {
-        //     letterEls[idx].innerHTML = letter;
-        // }
-        // guess = 
-    
 }
+
 function checkResult() {
     if (guess.join('') === word.join('')) return 'W';
     if (tries === 0) return 'L';
@@ -110,7 +98,7 @@ function checkResult() {
 
 function renderResult() {
     if (result === 'W') {
-        document.querySelector('#result').innerHTML = 'You Saved him';
+        document.querySelector('#result').innerHTML = 'You Saved him!';
         playAgainEl.style.visibility = 'visible';
         guessButtonEl.style.visibility = 'hidden';
 
@@ -119,20 +107,15 @@ function renderResult() {
         playAgainEl.style.visibility = 'visible';
         guessButtonEl.style.visibility = 'hidden';
         spacemanEl.style.visibility = 'hidden';
+        wrongLetterEl.style.visibility = 'hidden';
     } else {
-        document.querySelector('#result').innerHTML = `You have ${tries} deep breaths left`
+        document.querySelector('#result').innerHTML = `You Have ${tries} Liters of Oxygen`
         let wrongLetter = wrongChoice.join('  ')
         wrongLetterEl.innerHTML = `${wrongLetter}`;
     }
 }
 
-function refreshBoard() {
-    window.location.reload()
-}
-
 function renderIMG() {
-    // const imgPath = `pseudocode/IMG/spaceman-${userChoice.length}.png`;
-    // console.log(imgPath);
     spacemanEl.src = `pseudocode/IMG/spaceman-${wrongChoice.length}.png`;
 }
 

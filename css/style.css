@@ -35,10 +35,10 @@ h2 {
     font-size: 6vw;
     width: 60vw;
     color: white;
-    /* grid-area: main; */
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    letter-spacing: 25px;
     margin: auto;
 }
 
@@ -52,11 +52,6 @@ img {
     margin-top: 10px;
 }
 
-#word>div {
-    border-bottom: 3px solid lightcoral;
-    width: 50px;
-    height: 100px;
-}
 
 #wrongLetter {
     font-size: 5vw;
