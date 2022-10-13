@@ -1,36 +1,38 @@
-
-
 body {
-    background-image: url(https://newevolutiondesigns.com/images/freebies/4k-space-wallpaper-1.jpg) ;
+    background-image: url(https://newevolutiondesigns.com/images/freebies/4k-space-wallpaper-1.jpg);
     background-size: cover;
     font-family: 'Gemunu Libre', sans-serif;
     height: 100%;
     display: flex;
-    flex-direction: column;     
+    flex-direction: column;
     text-align: center;
     justify-content: space-between;
-    align-items:center ;
+    align-items: center;
 }
 
 button {
     background-color: black;
     color: white;
 }
+
 button:hover {
     background-color: white;
     color: black;
-  }
+}
+
 .title {
     font-family: 'Gemunu Libre', sans-serif;
-    font-size: 80px;
+    font-size: 5vw;
     color: white;
 }
+
 h2 {
-    font-size: 30px;
+    font-size: 2vw;
     color: white;
 }
+
 #word {
-    font-size: 100px;
+    font-size: 6vw;
     width: 60vw;
     color: white;
     /* grid-area: main; */
@@ -39,50 +41,40 @@ h2 {
     justify-content: space-evenly;
     margin: auto;
 }
+
 #result {
-    font-size: 100px;
+    font-size: 5vw;
     color: white;
 }
+
 img {
-    width: 30%;
+    width: 25%;
+    margin-top: 10px;
 }
-#word > div {
+
+#word>div {
     border-bottom: 3px solid lightcoral;
     width: 50px;
     height: 100px;
 }
-#wrongLetter {
-    font-size: 80px;
-    color: white;
-    /* grid-area: main; */
-    margin-top: 30px;
-    justify-content: center;
-}
-#tries {
-    font-size: 80px;
 
-}   
+#wrongLetter {
+    font-size: 5vw;
+    color: white;
+}
+
 .keys {
     display: inline-block;
-    height: 40px;
-    width: 40px;
-    margin: 10px;
-} 
+    height: 5vmin;
+    width: 5vmin;
+    margin: 2vmin;
+}
+
 #playAgain {
-    height: 40px;   
-    width: 100px;
+    height: 50px;
+    width: 150px;
+    font-size: 20px;
+    margin-top: 40px;
     align-items: center;
     justify-content: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
