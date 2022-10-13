@@ -7,7 +7,10 @@ to guess a random mystery word.  Guess the word before the spaceman dissapears
 
 # Screen Shots:
 
-<img width="1440" alt="Screen Shot 2022-10-13 at 2 58 12 PM" src="https://user-images.githubusercontent.com/66542022/195684507-63cc6433-3003-4c42-8642-26987278697d.png">
+  
+  <img width="1440" alt="Screen Shot 2022-10-13 at 6 38 59 PM" src="https://user-images.githubusercontent.com/66542022/195723635-fef7587e-ad71-4784-a0ab-dc81999d9604.png">
+
+
 
 # Technology Used:
   
@@ -19,7 +22,7 @@ to guess a random mystery word.  Guess the word before the spaceman dissapears
   
   1.) Click the letter that you think may be in the word<br>
   
-  2.) If  correct letter is in the word it will appear.  If not, part of the spaceman       will dissapear with each failed attempt and he will lose 1 liter of oxygen.
+  2.) If the letter chosen is in the word, it will appear.  If not, part of the spaceman will dissapear.  With each failed attempt the Spaceman will lose 1 liter of oxygen! 
   
   [Click here to save the SpaceMan!](https://coreysumma.github.io/Spaceman/)
   
