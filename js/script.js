@@ -44,12 +44,10 @@ function handleChoice(evt) {  //the function for event listener
         })
         result = checkResult();
         render();
-
     } else {
         wrongChoice.push(evt.target.value.toUpperCase())
         tries -= 1;
         result = checkResult();
-        
         render()
     }
 }
@@ -81,17 +79,17 @@ function render() {
 
 
 function pickWord() {
-    let chosenWord = Math.floor(Math.random() * wordBank.length);//choose from random word index
-    word = wordBank[chosenWord];//assign word to random word
-    return word.split('');//return an array of the word
+    let chosenWord = Math.floor(Math.random() * wordBank.length);//Choose from random word index
+    word = wordBank[chosenWord];//Assign word to random word
+    return word.split('');//Return an array of the word
 }
 
 function renderWord() {
-    wordEl.textContent = guess.join('');//this will return the word 
+    wordEl.textContent = guess.join('');//This will return the word without commas from the word array
 }
 
 function checkResult() {
-    if (guess.join('') === word.join('')) return 'W';
+    if (guess.join('') === word.join('')) return 'W';//Win logic for players guess === word
     if (tries === 0) return 'L';
     return null
 }

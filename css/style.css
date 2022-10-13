@@ -18,6 +18,8 @@ button {
 button:hover {
     background-color: white;
     color: black;
+    opacity: 1;
+
 }
 
 .title {
@@ -33,15 +35,16 @@ h2 {
 
 #word {
     font-size: 6vw;
-    width: 60vw;
+    width: 100%;
     color: white;
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: space-around;
     letter-spacing: 25px;
-    margin: auto;
+    
 }
+
 
 #result {
     font-size: 5vw;
@@ -51,6 +54,7 @@ h2 {
 img {
     width: 25%;
     margin-top: 10px;
+    
 }
 
 
