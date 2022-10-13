@@ -57,11 +57,11 @@ function handleChoice(evt) {  //the function for event listener
 /*----- functions -----*/
 init();
 function init() {
-    guess = []
     wrongLetterEl.style.visibility = 'visible';
     spacemanEl.style.visibility = 'visible';
     guessButtonEl.style.visibility = 'visible';
     playAgainEl.style.visibility = 'hidden';
+    guess = []
     tries = 6;
     word = pickWord();
     correctChoice = [];
@@ -87,7 +87,7 @@ function pickWord() {
 }
 
 function renderWord() {
-    wordEl.textContent = guess.join('');
+    wordEl.textContent = guess.join('');//this will return the word 
 }
 
 function checkResult() {
@@ -101,6 +101,7 @@ function renderResult() {
         document.querySelector('#result').innerHTML = 'You Saved him!';
         playAgainEl.style.visibility = 'visible';
         guessButtonEl.style.visibility = 'hidden';
+        wrongLetterEl.style.visibility = 'hidden';
 
     } else if (result === 'L') {
         document.querySelector('#result').innerHTML = 'You Lose';
@@ -111,7 +112,7 @@ function renderResult() {
     } else {
         document.querySelector('#result').innerHTML = `You Have ${tries} Liters of Oxygen`
         let wrongLetter = wrongChoice.join('  ')
-        wrongLetterEl.innerHTML = `${wrongLetter}`;
+        wrongLetterEl.innerHTML = `Wasted Breath:${wrongLetter}`;
     }
 }
 
