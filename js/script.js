@@ -1,6 +1,6 @@
 /*----- Constants -----*/
-// const wordBank = ['PLANET', 'ASTEROID', 'UFO', 'COMET', 'STAR', 'SUN', 'ANDROMEDA', 'SUPERNOVA'];
-const wordBank = ['POOOOP'];
+ const wordBank = ['PLANET', 'ASTEROID', 'UFO', 'COMET', 'STAR', 'SUN', 'ANDROMEDA', 'SUPERNOVA'];
+
 
 
 
