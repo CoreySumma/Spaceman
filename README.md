@@ -21,7 +21,7 @@ to guess a random mystery word.  Guess the word before the spaceman dissapears
   
   2.) If  correct letter is in the word it will appear.  If not, part of the spaceman       will dissapear with each failed attempt and he will lose 1 liter of oxygen.
   
-  [Click here to save the SpaceMan!] (https://coreysumma.github.io/Spaceman/)
+  [Click here to save the SpaceMan!](https://coreysumma.github.io/Spaceman/)
   
   # Next Steps
   
