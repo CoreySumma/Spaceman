@@ -17,7 +17,7 @@ Technology Used
   
   Getting Started
   
-  1.) Click the letter that you think may be in the word
+  1.) Click the letter that you think may be in the word<br>
   2.) If  correct letter is in the word it will appear.  If not, part of the spaceman       will dissapear with each failed attempt and he will lose 1 liter of oxygen.
   
   [Click here to save the SpaceMan!] (https://coreysumma.github.io/Spaceman/)
