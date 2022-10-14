@@ -51,8 +51,7 @@ function handleChoice(evt) {  //the function for event listener
         render()
     }
 }
-
-/*----- functions -----*/
+// Initialize the state
 init();
 function init() {
     wrongLetterEl.style.visibility = 'visible';
@@ -77,6 +76,7 @@ function render() {
     renderResult();
 }
 
+/*----- functions -----*/
 
 function pickWord() {
     let chosenWord = Math.floor(Math.random() * wordBank.length);//Choose from random word index
