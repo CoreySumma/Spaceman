@@ -10,7 +10,7 @@ let wrongChoice; //Incorrect letter chosen/clicked
 let tries;//How many wrong clicks available
 let word;//Represents the word chosen for the game
 let result;// Represents the W or L result of the game 
-let guess; //Where the guess appears (_) for each letter
+let guess; //Where the guess appears (_) for each letter & players choice
 
 
 
